@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background-color: #D9D9DD;
+}
+
+/*-----------------------HEADER--------------*/
+
+#hero{
+    /*position: fixed;*/
+    margin-top: 0;
+}
+
+#hero .nav-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAE1DC;
+}
+
+.logo img{
+    width: 40%;
+}
+
+#nav-bar ul{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+    list-style-type: none;  
+}
+
+.nav-icons{
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-icons::after {
+    content: "";
+    display: block;
+    background: black;
+    width: 80%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.nav-icons:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-lavel, .nav-imput{
+    display: none;
+}
+
+/*--------------------INDEX--------------*/
+/*SECTION - CARRUCEL*/
+.slider-conteiner-conteiner{
+    margin: 20px;  
+}
+
+/*SECTION - CARD PRESENTARION*/
+
+.cart-container{
+        margin: 10px 30px;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%, 10%;
+    padding: 110px;
+
+    gap: 12px;
+    transition: gap 200ms;
+}
+
+#card:hover{
+    gap: 24px;
+}
+
+#card img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.romiPresentation{
+    text-align: center;
+
+}
+
+/*SECTION - PRODUCTOS DESTACADOS*/
+
+.productosDestacados-container-conteiner h2{
+    margin: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+   
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.card-product{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.card-product-img{
+    display: grid;
+    grid-row: 1fr;
+    grid-column: 1fr; 
+    justify-items: center;
+    align-items: center;   
+}
+
+.card-product-img img{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    border: #FAE1DC solid 5px; 
+    justify-items: center;
+    align-items: center; 
+}
+
+.card-product-content{
+    grid-row: 1fr;
+    grid-column: 1fr;
+    
+}
+
+.card-product-content{
+    text-align: center;
+    
+}
+
+
+
+/*----------------------FOOTER-------------------*/
+
+
+#footer{
+    background-color: #FAE1DC;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-conteiner-conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.footer-contact{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-social{
+    margin: 15px 10px;
+   
+}
+
+.footer-social .footer-icon{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.footer-icon{
+    width: 50px;
+    height: auto;
+    margin: 5px;
+}
+
+.footer-icon:hover{
+    transform: scale(1.2);
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+   
+}
+
+/*---------------------RESPONSIVE----------------*/
+
+@media (max-width: 700px) {
+    
+   .nav-lavel{
+    display: block;
+    cursor: pointer;
+   }
+
+   #nav-bar ul{
+    position:fixed;
+    top: 90px;
+    bottom: 0;
+    background: #D9D9DD;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    clip-path: circle(0 at center );
+    transition: clip-path 1s ease-in-out;
+   }
+
+   .nav-imput:checked + #nav-bar ul{
+    clip-path: circle(100% at center); 
+}
+
+
+
+
+/*------------FOOTER------------------*/
+
+.footer-conteiner-conteiner{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-conteiner{
+    align-items: center;
+}
+
+.footer-img{
+    display: none;
+}
+
+}
+
+/*-----------------------MAIN-------------------*/
+
+@media (max-width: 600px) {
+
+ #card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5%, 10%;
+        padding: 10px;
+    
+        gap: 12px;
+        transition: gap 200ms;
+    }
+
+    .cart-container{
+        margin: 0;
+}
+
+
+
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+       
+    }
+}
