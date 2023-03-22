@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Playfair Display', serif;
    
 }
 
@@ -13,6 +15,9 @@ body{
 #hero{
     /*position: fixed;*/
     margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 200;
+    
 }
 
 #hero .nav-container{
@@ -62,7 +67,9 @@ body{
 /*--------------------INDEX--------------*/
 /*SECTION - CARRUCEL*/
 .slider-conteiner-conteiner{
-    margin: 20px;  
+    margin: 20px; 
+    position: relative; 
+    z-index: -100;
 }
 
 /*SECTION - CARD PRESENTARION*/
@@ -94,6 +101,8 @@ body{
 
 .romiPresentation{
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 
 }
 
@@ -151,9 +160,23 @@ body{
     
 }
 
+/*-------------------------PRODUCTOS------------------------*/
+
+.product-conteiner{
+    position: relative;
+    z-index: -100;
+}
+
 /*----------------CLIENT-------------------------*/
 
 .title{
+    text-align: center;
+    margin: 20px;
+}
+
+.title-text{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
     text-align: center;
     margin: 20px;
 }
@@ -205,6 +228,55 @@ body{
     transition: 0.7s;  
 } 
 
+/*---------------------EMPRESA-------------------*/
+
+.empresa__container{
+    position: relative;
+    z-index: -100;
+}
+
+.empresa__title{
+    text-align: center;
+    font-weight: 700px;
+    margin: 20px 0px 10px;
+}
+
+.empresa__text{
+    text-align: center;
+    margin: 20px 0px  10px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.empresa__bootstrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+
+
+.empresa__card--card1{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -100;
+}
+
+.empresa__card--card2{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -100;
+
+}
+
 
 /*----------------------FOOTER-------------------*/
 
@@ -255,8 +327,12 @@ body{
 
 .footer-copyright {
     display: flex;
-    justify-content: center;
-   
+    justify-content: center; 
+}
+
+.footer-text{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 }
 
 /*---------------------RESPONSIVE----------------*/
@@ -270,7 +346,7 @@ body{
 
    #nav-bar ul{
     position:fixed;
-    top: 90px;
+    top: 80px;
     bottom: 0;
     background: #D9D9DD;
     left: 0;
